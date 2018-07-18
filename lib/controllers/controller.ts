@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import { ContactSchema } from "@models/crmModel";
+import { ContactSchema } from "../models/crmModel";
 import { Response, Request } from "express";
 
 // default schema set up
@@ -7,7 +7,7 @@ const Contact = mongoose.model('contact', ContactSchema);
 
 export class ContactController {
     
-    public defaultRoute = (res: Response, req: Request) => {
+    public defaultRoute = (req: Request, res: Response) => {
         res.json(
             {
                 message: 'Api works'
